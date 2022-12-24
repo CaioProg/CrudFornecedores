@@ -16,7 +16,7 @@ namespace CrudFornecedores.Models
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "O campo 'Cnpj' é obrigatório!")]
-        //[StringLength(14, ErrorMessage = "limite de 14 ")]
+        //[(14, ErrorMessage = "limite de 14")]
         [Column("Cnpj")]
         [Display(Name = "Cnpj")]
         public long Cnpj { get; set; }
