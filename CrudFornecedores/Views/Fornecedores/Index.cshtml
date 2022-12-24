@@ -30,6 +30,9 @@
 			<th>
 				@Html.DisplayNameFor(model => model.Especialidade)
 			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Id)
+			</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -46,8 +49,11 @@
 					@Html.DisplayFor(modelItem => item.Especialidade)
 				</td>
 				<td>
-					<a class="btn btn-secondary btn-sm" asp-action="Edit" asp-route-id="@item.Id ">Editar</a> 
-					<a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.Id">Detalhes</a> 
+					@Html.DisplayFor(modelItem => item.Id)
+				</td>
+				<td>
+					<a class="btn btn-secondary btn-sm" asp-action="Edit" asp-route-id="@item.Id ">Editar</a>
+					<a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
 					<a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
 				</td>
 			</tr>

@@ -15,30 +15,30 @@
 <hr />
 
 <br />
+<dl class="row row-space">
+	<div class="col-6">
 
-<div>
-	<dl class="row row-space">
 		<div class="col-6">
-		<dt class="col-sm-3">
+	<dt class="col-sm-3">
 				@Html.DisplayNameFor(model => model.Nome)
-		</dt>
-		<dd class="col">
+	</dt>
+	<dd class="col">
 				@Html.DisplayFor(model => model.Nome)
-		</dd>
-</div>
+	</dd>
+	</div>
 
 
-<div class="col-6">
+	<div class="col-6">
 	<dt class="col-sm-3">
 				@Html.DisplayNameFor(model => model.Cnpj)
 	</dt>
 	<dd class="col-sm">
 				@Html.DisplayFor(model => model.Cnpj)
 	</dd>
-</div>
+	</div>
 
 
-<div class="col-12 mt-2">
+	<div class="col-12 mt-2">
 	<dt class="col-sm-3">
 
 				@Html.DisplayNameFor(model => model.Especialidade)
@@ -46,10 +46,19 @@
 	<dd class="col-sm">
 				@Html.DisplayFor(model => model.Especialidade)
 	</dd>
-</div>
+	</div>
+
+	<div class="col-12 mt-2">
+	<dt class="col-sm-3">
+
+				@Html.DisplayNameFor(model => model.Id)
+	</dt>
+	<dd class="col-sm">
+				@Html.DisplayFor(model => model.Id)
+	</dd>
+	</div>
 
 </dl>
-</div>
 <div>
 	<a asp-action="Edit" class="btn btn-primary" asp-route-id="@Model?.Id">Editar</a>
 
