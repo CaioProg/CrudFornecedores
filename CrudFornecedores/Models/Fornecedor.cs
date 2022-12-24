@@ -6,7 +6,6 @@ namespace CrudFornecedores.Models
     [Table("Fornecedor")]
     public class Fornecedor
     {
-        [Key]
         public int Id { get; set; }
 
         //[Required(ErrorMessage = "O campo 'Nome' é obrigatório!")]

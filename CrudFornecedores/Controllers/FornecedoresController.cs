@@ -48,7 +48,7 @@ namespace CrudFornecedores.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome")] Fornecedor fornecedor)
+        public async Task<IActionResult> Create([Bind("Id,Nome,Cnpj,Especialidade")] Fornecedor fornecedor)
         {
             if (ModelState.IsValid)
             {
@@ -80,7 +80,7 @@ namespace CrudFornecedores.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome")] Fornecedor fornecedor)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Cnpj,Especialidade")] Fornecedor fornecedor)
         {
             if (id != fornecedor.Id)
             {
