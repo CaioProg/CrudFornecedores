@@ -1,0 +1,54 @@
+﻿@model CrudFornecedores.Models.Fornecedor;
+
+@{
+	ViewData["Title"] = "Create";
+}
+
+<style>
+	h1 {
+		text-align: center;
+	}
+</style>
+
+<h1>Cadastro de Fornecedor</h1>
+
+<h4></h4>
+<hr />
+<form asp-action="Create">
+	<div class="row row-space">
+		<div class="col-6">
+			<label asp-for="Nome" class="control-label"></label>
+			<input asp-for="Nome" class="form-control" />
+			<span asp-validation-for="Nome" class="text-danger"></span>
+		</div>
+		<div class="col-6">
+			<label asp-for="Cnpj" class="control-label"></label>
+			<input asp-for="Cnpj" class="form-control" />
+			<span asp-validation-for="Cnpj" class="text-danger"></span>
+		</div>
+
+		<div class="col-6">
+			<label asp-for="Especialidade" class="control-label"></label>
+			<input asp-for="Especialidade" class="form-control" />
+			<span asp-validation-for="Especialidade" class="text-danger"></span>
+		</div>
+	</div>
+
+	<br>
+
+	<div class="p-t-15">
+		<div class="form-group d-flex justify-content-between">
+			<button type="submit" value="Cadastrar" class="btn btn-primary">Cadastrar</button>
+		</div>
+	</div>
+</form>
+<div>
+	<a asp-action="Index">Voltar a lista</a>
+</div>
+
+
+@section Scripts {
+    @{
+	await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
+}
