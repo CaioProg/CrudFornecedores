@@ -17,17 +17,41 @@
 <br />
 
 <div>
-	<dl class="row">
-		<dt class="col-sm-2">
-			@Html.DisplayNameFor(model => model.Nome)
+	<dl class="row row-space">
+		<div class="col-6">
+		<dt class="col-sm-3">
+				@Html.DisplayNameFor(model => model.Nome)
 		</dt>
-		<dd class="col-sm-10">
-			@Html.DisplayFor(model => model.Nome)
+		<dd class="col">
+				@Html.DisplayFor(model => model.Nome)
 		</dd>
-	</dl>
+</div>
+
+
+<div class="col-6">
+	<dt class="col-sm-3">
+				@Html.DisplayNameFor(model => model.Cnpj)
+	</dt>
+	<dd class="col-sm">
+				@Html.DisplayFor(model => model.Cnpj)
+	</dd>
+</div>
+
+
+<div class="col-12 mt-2">
+	<dt class="col-sm-3">
+
+				@Html.DisplayNameFor(model => model.Especialidade)
+	</dt>
+	<dd class="col-sm">
+				@Html.DisplayFor(model => model.Especialidade)
+	</dd>
+</div>
+
+</dl>
 </div>
 <div>
-	<a asp-action="Edit" class="btn btn-primary" asp-route-id="@Model?.Id">Editar</a> 
+	<a asp-action="Edit" class="btn btn-primary" asp-route-id="@Model?.Id">Editar</a>
 
 	<br />
 
