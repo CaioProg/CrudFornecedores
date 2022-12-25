@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<CrudFornecedores.Models.Fornecedor>
-
+@using CrudFornecedores.Controllers
 @{
 	ViewData["Title"] = "Lista";
 }
@@ -43,7 +43,9 @@
 					@Html.DisplayFor(modelItem => item.Nome)
 				</td>
 				<td>
-					@Html.DisplayFor(modelItem => item.Cnpj)
+					@*@Html.DisplayFor(modelItem => item.Cnpj)*@
+					@*Formatando o CNPJ:*@
+					@Convert.ToInt64(item.Cnpj).ToString(@"00\.000\.000\/0000\-00")
 				</td>
 				<td>
 					@Html.DisplayFor(modelItem => item.Especialidade)
