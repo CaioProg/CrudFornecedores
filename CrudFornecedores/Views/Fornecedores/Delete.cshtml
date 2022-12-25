@@ -31,7 +31,11 @@
 			@Html.DisplayNameFor(model => model.Cnpj)
 		</dt>
 		<dd class="col-sm-10">
-			@Html.DisplayFor(model => model.Cnpj)
+			@*Cnpj sem formatação*@
+			@*@Html.DisplayFor(model => model.Cnpj)*@
+
+			@*Cnpj com formatação*@
+			@Model.Cnpj.ToString(@"00\.000\.000\/0000\-00")
 		</dd>
 	</dl>
 

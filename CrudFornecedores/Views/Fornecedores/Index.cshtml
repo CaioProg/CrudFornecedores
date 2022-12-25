@@ -43,8 +43,10 @@
 					@Html.DisplayFor(modelItem => item.Nome)
 				</td>
 				<td>
+					@*Cnpj sem formatação*@
 					@*@Html.DisplayFor(modelItem => item.Cnpj)*@
-					@*Formatando o CNPJ:*@
+
+					@*Cnpj com formatação*@
 					@Convert.ToInt64(item.Cnpj).ToString(@"00\.000\.000\/0000\-00")
 				</td>
 				<td>
