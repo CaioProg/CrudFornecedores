@@ -59,7 +59,10 @@ namespace CrudFornecedores.Controllers
 			if (ModelState.IsValid)
 			{
 				_context.Add(fornecedor);
+
+				// creates on ploomes
 				await Ploomes.CreateCompanyPloomesAsync(fornecedor);
+
 				await _context.SaveChangesAsync();
 				return RedirectToAction(nameof(Index));
 			}
@@ -117,15 +120,19 @@ namespace CrudFornecedores.Controllers
 		}
 
 		// GET: Fornecedor/Delete/5
-		public async Task<IActionResult> Delete(int? id)
+		public async Task<IActionResult> Delete(int? id, Fornecedor fornecedor)
 		{
 			if (id == null)
 			{
 				return NotFound();
 			}
-
-			var fornecedor = await _context.Fornecedor
+			
+			fornecedor = await _context.Fornecedor
 				.FirstOrDefaultAsync(m => m.Id == id);
+
+			// deletes in ploomes
+			await Ploomes.DeleteCompanyPloomesAsync(fornecedor);
+
 			if (fornecedor == null)
 			{
 				return NotFound();
