@@ -1,4 +1,7 @@
 ﻿using CrudFornecedores.Models;
+using Microsoft.Extensions.WebEncoders.Testing;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Text;
 
 namespace CrudFornecedores.Integrations
@@ -24,7 +27,19 @@ namespace CrudFornecedores.Integrations
 				content.Headers.Add($"User-Key", key);
 
 				var response = await client.PostAsync(url, content);
-				Console.WriteLine(response.StatusCode);
+
+				var resposta = await response.Content.ReadAsStringAsync();
+
+				// Preenche o Id Ploomes aqui no sistema
+				if (response.IsSuccessStatusCode)
+				{
+					var res = JsonConvert.DeserializeObject<ResponsePloomes>(resposta);
+					var id = res.value[0].Id;
+
+					fornecedor.IdPloomes = id;
+				}
+
+				//Console.WriteLine(response.StatusCode);
 			}
 			catch (Exception ex)
 			{

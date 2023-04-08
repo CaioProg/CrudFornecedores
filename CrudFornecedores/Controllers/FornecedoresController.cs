@@ -59,8 +59,8 @@ namespace CrudFornecedores.Controllers
 			if (ModelState.IsValid)
 			{
 				_context.Add(fornecedor);
-				await _context.SaveChangesAsync();
 				await Ploomes.CreateCompanyPloomesAsync(fornecedor);
+				await _context.SaveChangesAsync();
 				return RedirectToAction(nameof(Index));
 			}
 			return View(fornecedor);
