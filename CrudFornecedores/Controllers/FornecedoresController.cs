@@ -62,7 +62,6 @@ namespace CrudFornecedores.Controllers
 
 				// creates on ploomes
 				await Ploomes.CreateCompanyPloomesAsync(fornecedor);
-
 				await _context.SaveChangesAsync();
 				return RedirectToAction(nameof(Index));
 			}
@@ -102,6 +101,7 @@ namespace CrudFornecedores.Controllers
 				{
 					_context.Update(fornecedor);
 					await _context.SaveChangesAsync();
+					await Ploomes.EditCompanyPloomesAsync(fornecedor);
 				}
 				catch (DbUpdateConcurrencyException)
 				{
