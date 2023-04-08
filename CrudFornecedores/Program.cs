@@ -8,7 +8,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<Contexto>
     (options => options.UseSqlServer
-    ("Data Source=DESKTOP-A30174T\\SQLEXPRESS;Initial Catalog=CRUD_FORNECEDORES;Integrated Security=True"));
+    ("Data Source=DESKTOP-82SU7KD;Initial Catalog=CRUD_FORNECEDORES;Integrated Security=True"));
 
 var app = builder.Build();
 

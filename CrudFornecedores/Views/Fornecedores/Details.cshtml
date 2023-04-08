@@ -57,7 +57,30 @@
 				@Html.DisplayFor(model => model.Id)
 	</dd>
 	</div>
+		@if (Model.IdPloomes != 0)
+		{
+			<div class="col-12 mt-2">
+				<dt class="col-sm-3">
 
+					@Html.DisplayNameFor(model => model.IdPloomes)
+				</dt>
+				<dd class="col-sm">
+					@Html.DisplayFor(model => model.IdPloomes)
+				</dd>
+			</div>
+		}
+		else
+		{
+			<div class="col-12 mt-2">
+				<dt class="col-sm-3">
+
+					@Html.DisplayNameFor(model => model.IdPloomes)
+				</dt>
+				<dd class="col-sm">
+					Fornecedor não integrado
+				</dd>
+			</div>
+		}
 </dl>
 <div>
 	<a asp-action="Edit" class="btn btn-primary" asp-route-id="@Model?.Id">Editar</a>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Workspace\\CrudFornecedores\\CrudFornecedores\\CrudFornecedores.csproj": {}
+    "C:\\Users\\CaioLucas\\Workspace\\Fornecedores\\CrudFornecedores\\CrudFornecedores\\CrudFornecedores.csproj": {}
   },
   "projects": {
-    "C:\\Workspace\\CrudFornecedores\\CrudFornecedores\\CrudFornecedores.csproj": {
+    "C:\\Users\\CaioLucas\\Workspace\\Fornecedores\\CrudFornecedores\\CrudFornecedores\\CrudFornecedores.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Workspace\\CrudFornecedores\\CrudFornecedores\\CrudFornecedores.csproj",
+        "projectUniqueName": "C:\\Users\\CaioLucas\\Workspace\\Fornecedores\\CrudFornecedores\\CrudFornecedores\\CrudFornecedores.csproj",
         "projectName": "CrudFornecedores",
-        "projectPath": "C:\\Workspace\\CrudFornecedores\\CrudFornecedores\\CrudFornecedores.csproj",
+        "projectPath": "C:\\Users\\CaioLucas\\Workspace\\Fornecedores\\CrudFornecedores\\CrudFornecedores\\CrudFornecedores.csproj",
         "packagesPath": "C:\\Users\\CaioLucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Workspace\\CrudFornecedores\\CrudFornecedores\\obj\\",
+        "outputPath": "C:\\Users\\CaioLucas\\Workspace\\Fornecedores\\CrudFornecedores\\CrudFornecedores\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\CaioLucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[6.0.11, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.3.0, )"
@@ -69,7 +73,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -81,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

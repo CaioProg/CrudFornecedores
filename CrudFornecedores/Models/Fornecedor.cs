@@ -24,5 +24,6 @@ namespace CrudFornecedores.Models
         [Column("Especialidade")]
         [Display(Name = "Especialidade")]
         public string Especialidade { get; set; }
+        public int IdPloomes { get; set; }
     }
 }
